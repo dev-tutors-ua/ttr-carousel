@@ -9,11 +9,11 @@
 
 		public function __construct() {
 			
-			parent::__construct([
+			parent::__construct(array(
 				'singular' => __("Tutor", "sp"),
 				'plural' => __("Tutors", "sp"),
 				'ajax' => false
-			]);
+			));
 		}
 
 		/* DISPLAY METHODS */
