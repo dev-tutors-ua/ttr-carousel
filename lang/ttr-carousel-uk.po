@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-01-25 22:07+0200\n"
+"PO-Revision-Date: 2016-01-25 22:08+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ttr-carousel-admin-tbl.php\n"
+"X-Poedit-SearchPath-1: ttr-carousel-admin.php\n"
+"X-Poedit-SearchPath-2: ttr-carousel-widget.php\n"
+"X-Poedit-SearchPath-3: ttr-carousel.php\n"
+
+#: ttr-carousel-admin-tbl.php:13
+msgid "Tutor"
+msgstr "Тьютор"
+
+#: ttr-carousel-admin-tbl.php:14
+msgid "Tutors"
+msgstr "Тьютори"
+
+#: ttr-carousel-admin-tbl.php:34
+msgid "Edit"
+msgstr "Редагувати"
+
+#: ttr-carousel-admin-tbl.php:35 ttr-carousel-admin-tbl.php:71
+msgid "Delete"
+msgstr "Видалити"
+
+#: ttr-carousel-admin-tbl.php:61 ttr-carousel-admin.php:37
+msgid "Title"
+msgstr "Заголовок"
+
+#: ttr-carousel-admin-tbl.php:62 ttr-carousel-admin.php:42
+msgid "Image"
+msgstr "Картинка"
+
+#: ttr-carousel-admin-tbl.php:63 ttr-carousel-admin.php:55
+msgid "Hyperlink"
+msgstr "Відсилка"
+
+#: ttr-carousel-admin.php:32
+msgid "Item Editor"
+msgstr "Редактор Пункта"
+
+#: ttr-carousel-admin.php:45
+msgid "Media"
+msgstr "Медіа Браузер"
+
+#: ttr-carousel-admin.php:72
+msgid "Upload or Select Image"
+msgstr "Завантажте або Виберіть Картинку"
+
+#: ttr-carousel-admin.php:74
+msgid "Select"
+msgstr "Вибрати"
+
+#: ttr-carousel-admin.php:97
+msgid "Add"
+msgstr "Додати"
+
+#: ttr-carousel-admin.php:101
+msgid "Updated"
+msgstr "Оновити"
+
+#: ttr-carousel-admin.php:114 ttr-carousel-widget.php:9 ttr-carousel.php:58
+msgid "Carousel"
+msgstr "Карусель"
+
+#: ttr-carousel-admin.php:114
+msgid "Add New"
+msgstr "Створити Пункт"
+
+#: ttr-carousel-widget.php:10
+msgid ""
+"Bootstrap carousel. Displays photos of size (1170 x 352), from image category"
+msgstr "Віджет каруселі, яка відображає картинки розміром (1170 x 352 px)"
