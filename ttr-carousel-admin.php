@@ -47,7 +47,7 @@ function ttr_carousel_admin_form($id=-1,$title="",$img_id=-1,$hplink="") {
 							<?php if ($img_id == -1) { ?>
 								<img id="thumb_img" src="">
 							<?php } else { ?>
-								<img id="thumb_img" style="display:block;" src="<?php echo wp_get_attachment_image_src($img_id, "carousel-thumb")[0]; ?>">
+								<img id="thumb_img" style="display:block;" src="<?php echo(wp_get_attachment_image_src($img_id, "carousel-thumb")[0]); ?>">
 							<?php } ?>
 						</td>
 					</tr>
