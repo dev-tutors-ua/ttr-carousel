@@ -30,18 +30,18 @@
 			$url_del = sprintf("?page=%s&action=%s&id=%s", esc_attr($_REQUEST['page']), 'del-itm', $item['id']);
 			$url_del = wp_nonce_url($url_del, 'del-item_'.$item['id']);
 
-			$actions = [
+			$actions = array( 
 				"edit" => sprintf("<a href=\"?page=%s&id=%s&type=%s\">".__("Edit","ttr-carousel")."</a>",$_REQUEST['page'], $item['id'], "edit"),
 				"delete" => "<a href=\"{$url_del}\">".__("Delete","ttr-carousel")."</a>"
-			];
+			);
 
 			return $title.$this->row_actions($actions);
 		}
 
 		// Display Image Column
 		public function column_img_id($item) {
-			$url = wp_get_attachment_image_src($item['img_id'], "carousel-thumb")[0];
-			return "<img src=\"{$url}\">";
+			$url = wp_get_attachment_image_src($item['img_id'], "carousel-thumb");
+			return "<img src=\"{$url[0]}\">";
 		}
 
 		// Display Link Column
@@ -56,20 +56,20 @@
 
 		// @returns column slugs and titles
 		function get_columns() {
-			$columns = [
+			$columns = array( 
 				'cb' => "<input type=\"checkbox\" >",
 				'title' => __("Title", "ttr-carousel"),
 				'img_id' => __("Image", "ttr-carousel"),
 				'page_link' => __("Hyperlink", "ttr-carousel")
-			];
+			);
 			return $columns;
 		}
 
 		// @returns row actions array
 		public function get_bulk_actions() {
-			$act = [
+			$act = array( 
 				'bulk-delete' => __('Delete',"ttr-carousel")
-			];
+			);
 			return $act;
 		}
 
@@ -118,8 +118,8 @@
 			/* Generate Headers */
 			$this->_column_headers = array(
 				$this->get_columns(), // (Array) Column Slugs and Titles
-				[], // (Array) Hidden Fields
-				[], // (Array) Sortable Columns
+				array(), // (Array) Hidden Fields
+				array(), // (Array) Sortable Columns
 				'title' // (String) Slug of column which displays actions (edit, view, etc.)
 			);
 

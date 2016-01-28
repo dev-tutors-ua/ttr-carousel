@@ -6,13 +6,56 @@ function ttr_carousel_admin_style () {
 		table img {
 			width: 100%;
 		}
-
 		.form-edit img {
 			display: none;
 
 			width: 50%;
 
 			margin-top: 5px;
+		}
+		.warp {
+			margin-right: 20px;
+		}
+		.form-edit label {
+			display: inline-block;
+
+			margin-top: 8px;
+			width: 100%;
+			height: 100%;
+			
+			text-align: right;
+			vertical-align: text-top;
+			font-weight: bold;
+		}
+		.form-edit input, .form-edit select, .form-edit textarea {
+			width: 400px;
+		}
+		.form-edit textarea {
+			height: 200px;
+			text-align: left;
+		}
+		.btn-default {
+			background-color: #e0e0e0;
+
+			margin-top: 10px;
+			padding: 8px;
+
+			border-radius: 5px;
+			border: none;
+
+			color: #2a73aa;
+			font-size: 12pt;
+			font-weight: bold;
+		}
+		.btn-default:hover {
+			background-color: #2a73aa;
+			color: #fff;
+
+			cursor: pointer;
+		}
+		.btn-head {
+			font-size: 10pt;
+			text-decoration: none;
 		}
 	</style>
 <?php
@@ -127,7 +170,6 @@ function ttr_carousel_admin_table() {
 
 function ttr_carousel_admin_render() {
 	
-	ttr_db_admin_style();
 	ttr_carousel_admin_style();
 
 	if (!isset($_GET["type"])) $_GET["type"] = "list";
