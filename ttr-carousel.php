@@ -3,7 +3,7 @@
 /*
  * Plugin Name: Tutor Carousel
  * Description: Image Carousel
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Fedor Bobylev
  * Author URI: http://techblogogy.tk/
  * GitHub Plugin URI: https://github.com/dev-tutors-ua/ttr-carousel
