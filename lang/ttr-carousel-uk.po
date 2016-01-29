@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-01-25 22:07+0200\n"
-"PO-Revision-Date: 2016-01-25 22:08+0200\n"
+"POT-Creation-Date: 2016-01-29 20:42+0200\n"
+"PO-Revision-Date: 2016-01-29 20:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk_UA\n"
@@ -35,49 +35,61 @@ msgstr "Редагувати"
 msgid "Delete"
 msgstr "Видалити"
 
-#: ttr-carousel-admin-tbl.php:61 ttr-carousel-admin.php:37
+#: ttr-carousel-admin-tbl.php:61 ttr-carousel-admin.php:95
 msgid "Title"
 msgstr "Заголовок"
 
-#: ttr-carousel-admin-tbl.php:62 ttr-carousel-admin.php:42
+#: ttr-carousel-admin-tbl.php:62 ttr-carousel-admin.php:99
 msgid "Image"
 msgstr "Картинка"
 
-#: ttr-carousel-admin-tbl.php:63 ttr-carousel-admin.php:55
+#: ttr-carousel-admin-tbl.php:63 ttr-carousel-admin.php:113
 msgid "Hyperlink"
 msgstr "Відсилка"
 
-#: ttr-carousel-admin.php:32
+#: ttr-carousel-admin.php:89
 msgid "Item Editor"
 msgstr "Редактор Пункта"
 
-#: ttr-carousel-admin.php:45
+#: ttr-carousel-admin.php:103
 msgid "Media"
 msgstr "Медіа Браузер"
 
-#: ttr-carousel-admin.php:72
+#: ttr-carousel-admin.php:131
 msgid "Upload or Select Image"
 msgstr "Завантажте або Виберіть Картинку"
 
-#: ttr-carousel-admin.php:74
+#: ttr-carousel-admin.php:133
 msgid "Select"
 msgstr "Вибрати"
 
-#: ttr-carousel-admin.php:97
+#: ttr-carousel-admin.php:156
 msgid "Add"
 msgstr "Додати"
 
-#: ttr-carousel-admin.php:101
+#: ttr-carousel-admin.php:160
 msgid "Updated"
 msgstr "Оновити"
 
-#: ttr-carousel-admin.php:114 ttr-carousel-widget.php:9 ttr-carousel.php:58
+#: ttr-carousel-admin.php:174 ttr-carousel-widget.php:9 ttr-carousel.php:60
 msgid "Carousel"
 msgstr "Карусель"
 
-#: ttr-carousel-admin.php:114
+#: ttr-carousel-admin.php:176
 msgid "Add New"
 msgstr "Створити Пункт"
+
+#: ttr-carousel-admin.php:177
+msgid "Arrange"
+msgstr "Редагуати Порядок"
+
+#: ttr-carousel-admin.php:200
+msgid "Arrange Elements"
+msgstr "Редактор Порядку"
+
+#: ttr-carousel-admin.php:204 ttr-carousel-admin.php:213
+msgid "Update"
+msgstr "Оновити"
 
 #: ttr-carousel-widget.php:10
 msgid ""
