@@ -3,7 +3,7 @@
 /*
  * Plugin Name: Tutor Carousel
  * Description: Image Carousel
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Fedor Bobylev
  * Author URI: http://techblogogy.tk/
  * GitHub Plugin URI: https://github.com/dev-tutors-ua/ttr-carousel
@@ -106,15 +106,19 @@ class TTR_carousel {
 	public static function add_item($title, $img_id, $hplink) {
 		global $wpdb;
 
+		$max_pos = $wpdb->get_var("SELECT MAX(position) FROM {$wpdb->prefix}carousel");
+		$max_pos++;
+
 		$wpdb->insert(
 			$wpdb->prefix."carousel",
 			array(
 				'title' => $title,
 				'img_id' => $img_id,
-				'page_link' => $hplink
+				'page_link' => $hplink,
+				'position' => $max_pos
 			),
 			array(
-				'%s','%d','%s'
+				'%s','%d','%s','%d'
 			)
 		);
 	}
