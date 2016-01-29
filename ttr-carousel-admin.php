@@ -57,6 +57,21 @@ function ttr_carousel_admin_style () {
 			font-size: 10pt;
 			text-decoration: none;
 		}
+
+		#c-items {
+			width: 400px
+		}
+		#c-items > li {
+			background-color: #fff;
+			border: 1px solid #eee;
+			padding: 10px;
+		}
+		#c-items > li:hover {
+			cursor: move;
+		}
+		#c-items > li > img{
+			width: 100%;
+		}
 	</style>
 <?php
 }
@@ -153,9 +168,14 @@ function ttr_carousel_admin_form($id=-1,$title="",$img_id=-1,$hplink="") {
 function ttr_carousel_admin_table() {
 	$crs_tbl = new ttr_carousel_tbl();
 	$add_page = get_site_url()."/wp-admin/admin.php?page=ttr-carousel&type=add";
+	$pos_page = get_site_url()."/wp-admin/admin.php?page=ttr-carousel&type=pos";
 ?>
 	<div class="warp">
-		<h1><?php _e("Carousel","ttr-carousel"); ?> <a href="<?php echo $add_page; ?>" class="btn-default btn-head"><?php _e("Add New","ttr-carousel"); ?></a></h1>
+		<h1><?php _e("Carousel","ttr-carousel"); ?></h1>
+		<h4>
+			<a href="<?php echo $add_page; ?>"><?php _e("Add New","ttr-carousel"); ?></a> | 
+			<a href="<?php echo $pos_page; ?>"><?php _e("Arrange","ttr-carousel"); ?></a>
+		</h4>
 		<div class="metabox-sortables">
 			<form method="post">
 				<?php 
@@ -168,6 +188,43 @@ function ttr_carousel_admin_table() {
 <?php
 }
 
+function ttr_carousel_admin_position_editor() {
+
+	if (isset($_POST['action']) && $_POST['action'] == "upt") {
+		TTR_carousel::arrange_items($_POST['items']);
+	}
+	
+	$items = TTR_carousel::get_items();
+?>
+	<div class="warp">
+		<h1><?php _e("Arrange Elements","ttr-carousel"); ?></h1>
+
+		<div class="item-editor">
+			<form method="post">
+				<button class="btn-default" name="action" value="upt" type="submit"><?php _e("Update","ttr-db"); ?></button>
+				<ul id="c-items">
+					<?php foreach($items as $i) { $url = wp_get_attachment_image_src($i['img_id'], "carousel-thumb"); ?>
+						<li>
+							<img src="<?php echo $url[0]; ?>">
+							<input type="hidden" name="items[]" value="<?php echo $i['id'] ?>">
+						</li>
+					<?php } ?>
+				</ul>
+				<button class="btn-default" name="action" value="upt" type="submit"><?php _e("Update","ttr-db"); ?></button>
+			</form>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$("#c-items").sortable();
+			$("#c-items").disableSelection();
+		});
+	</script>
+<?php
+}
+
 function ttr_carousel_admin_render() {
 	
 	ttr_carousel_admin_style();
@@ -176,6 +233,9 @@ function ttr_carousel_admin_render() {
 	switch ($_GET["type"]) {
 		case "add":
 			ttr_carousel_admin_form();
+			break;
+		case "pos":
+			ttr_carousel_admin_position_editor();
 			break;
 		case "edit":
 			$itm = TTR_carousel::get_item($_GET['id']);

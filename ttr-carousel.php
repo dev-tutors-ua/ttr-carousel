@@ -63,7 +63,7 @@ class TTR_carousel {
 	public static function get_items() {
 		global $wpdb;
 		
-		$sql = "SELECT * FROM {$wpdb->prefix}carousel";
+		$sql = "SELECT * FROM {$wpdb->prefix}carousel ORDER BY position ASC";
 		return $wpdb->get_results($sql, ARRAY_A);
 	
 	}
@@ -87,6 +87,20 @@ class TTR_carousel {
 	public static function rm_item($id) {
 		global $wpdb;
 		$wpdb->delete("{$wpdb->prefix}carousel", array('id' => $id), array('%d'));
+	}
+
+	public static function arrange_items($items) {
+		global $wpdb;
+
+		foreach ($items as $k=>$i) {
+			$wpdb->update(
+				$wpdb->prefix."carousel",
+				array ('position' => $k),
+				array ('id' => $i),
+				array ('%d')
+			);
+		}
+		
 	}
 
 	public static function add_item($title, $img_id, $hplink) {
